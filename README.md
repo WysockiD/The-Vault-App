@@ -8,7 +8,7 @@ Startup Django App Basics for who the code is intended:
 + `cd` into the root folder `.../The-Vault-App-main`.
 + We first need to migrate the models with `python manage.py makemigrations`.
 + Then `python manage.py migrate`.
-+ To run the server locally for personal use `python manage.py runserver`.
++ Run the server locally for personal use `python manage.py runserver`.
 + Localhost will take you instantly to the frontend at URL `.../products/`.
 + Before you get into the backend you need to create a superuser with `python manage.py createsuperuser`.
 + Now to get into the backend change the URL to the admin portal at `.../admin/`.
