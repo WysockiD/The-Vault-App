@@ -1,0 +1,62 @@
+{% extends 'products/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  {{ product.title }}
+{% endblock %}
+
+{% block site_css %}
+  <link rel="stylesheet" href="{% static 'products/styles/product-detail.css' %}">
+{% endblock %}
+
+{% block main_heading %}
+  {{ product.title }}
+{% endblock %}
+
+{% block body %}
+
+{% if product_found %}
+<article>
+  <img id="main-image" src="{{ product.image.url }}" alt="{{ product.title }}">
+  
+  <section id="season">
+    <h2 style='font-size:300%'>{{ product.title }}</h2>
+    ___________________________________________________________
+    <h3 style='font-style:italic'>Season</h3>
+    <address style='font-style: normal'>This item is from <span>{{ product.season.name }}</span> .</address>
+  </section>
+
+  <section id="details">
+    <h3 style='font-style: italic;'>What's This Item All About?</h3>
+    {{ product.description }}
+    <p>____________________________________</p>
+    <p style='font-style: italic;'> Quantity in stock: {{ product.qty }}</p>
+    <footer>
+      <p>Need more details? Please <a href="mailto:{{ product.organizer_email }}">contact us HERE</a>.</p>
+    </footer>
+  </section>
+
+  <section id="registration">
+    ____________________________________
+    <h3>Add this item to your watchlist below</h3>
+    <div>
+        
+    </div>
+    <form action="{% url 'product-detail' product.slug %}" method="POST">
+      {% csrf_token %}
+      <ul>
+        {{ form.as_ul }}
+      </ul>
+      <div id="registration-actions">
+        <button>Register</button>
+      </div>
+    </form>
+  </section>
+</article>
+{% else %}
+<p>No product found for this slug, sorry!</p>
+{% endif %}
+
+{% endblock %}
+    

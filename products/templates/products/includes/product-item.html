@@ -1,0 +1,32 @@
+<li class="product-item">
+  <article>
+    <div class="product-summary">
+      <div class="product-image">
+        {% if image %}
+        <img src="{{ image }}" alt="{{ title }}">
+        {% else %}
+
+        {% endif %}
+      </div>
+      <div class="product-details">
+        <h3>{{ title }}</h3>
+        Season:
+        <address>{{ season }}</address>
+        <div>
+          --
+        </div>
+        Category:
+        <address>{{ category }}</address>
+        <div> 
+          --
+        </div>
+        Quantity in stock:
+        <address> {{ qty }} </address>
+
+      </div>
+    </div>
+    <div class="product-actions">
+      <a href="{% url 'product-detail' slug %}" class="btn">More Details</a>
+    </div>
+  </article>
+</li>

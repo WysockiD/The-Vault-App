@@ -1,0 +1,29 @@
+{% extends 'products/base/base.html' %}
+
+{% load static %}
+
+{% block title %}All Products{% endblock %}
+
+{% block site_css %}
+  <link rel="stylesheet" href="{% static 'products/styles/all-products.css' %}">
+{% endblock %}
+   
+{% block main_heading %}
+Inventory tracked and listed here
+{% endblock %}
+
+{% block header_content %}
+<p>Track what you have in the database, visually!</p>
+{% endblock %}
+
+{% block body %}
+<section>
+  <h2>Current Inventory</h2>
+  <ol>
+    {% for product_item in products %}
+      {% include 'products/includes/product-item.html' with title=product_item.title image=product_item.image.url season=product_item.season category=product_item.category qty=product_item.qty slug=product_item.slug %}
+    {% endfor %}
+  </ol>
+</section>
+{% endblock %}
+   
