@@ -13,5 +13,5 @@ Startup Django App Basics for who the code is intended:
 + Before you get into the backend you need to create a superuser with `python manage.py createsuperuser`.
 + Now to get into the backend change the URL to the admin portal at `.../admin/`.
 + Here you will find the interface you will use to interact with the database and imput the product data.
-+ Anything you imput in the `.../admin/` backend will then be displayed visually in the `.../products/` frontend.
++ Beyond the database anything you imput in the `.../admin/` backend will then be displayed visually in the `.../products/` frontend.
 
