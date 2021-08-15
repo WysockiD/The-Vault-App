@@ -2,7 +2,7 @@
 
 A Django web app that is optimized for a specific inventory tracking system.
 
-Startup Django App Basics for who the code is intended
+Startup Django App Basics for who the code is intended:
 ---
 + Open your command terminal
 + `cd` into the root folder `.../The-Vault-App-main`.
