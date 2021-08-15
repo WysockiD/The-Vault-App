@@ -10,7 +10,7 @@ Startup Django App Basics for who the code is intended:
 + Then `python manage.py migrate`.
 + To run the server locally for personal use `python manage.py runserver`.
 + Localhost will take you instantly to the frontend at URL `.../products/`.
-+ Before you get into the backend you need to create a superuser with command `python manage.py createsuperuser`.
++ Before you get into the backend you need to create a superuser with `python manage.py createsuperuser`.
 + Now to get into the backend change the URL to the admin portal at `.../admin/`.
 + Here you will find the interface you will use to interact with the database and imput the product data.
 + Anything you imput in the `.../admin/` backend will then be displayed visually in the `.../products/` frontend.
