@@ -39,7 +39,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='images', null=True, blank=True)
 
     participants = models.ManyToManyField(Participant, blank=True, null=True)
-    organizer_email = models.EmailField(null=True, blank=True, default='lucasmatthews@hotmail.com')
+    organizer_email = models.EmailField(null=True, blank=True, default='')
 
 
     def __str__(self):
